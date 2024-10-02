@@ -1,0 +1,129 @@
+/* Basic resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #FFD1DC; /* Pastel pink background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.envelope-page, .letter-page {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.envelope-page {
+    background-color: #f7dbdbfd;
+    width: 100%;
+    height: 100%;
+}
+
+.y2k-characters {
+    position: absolute;
+    top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.y2k-characters img {
+    width: 120px;
+    height: auto;
+}
+
+.envelope {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart {
+    position: absolute;
+    font-size: 2em;
+    color: red;
+}
+
+.closed-envelope {
+    width: 100%;
+}
+
+.open-envelope {
+    display: none;
+    width: 100%;
+}
+
+/* Styles for the letter page */
+.letter-page {
+    display: none; /* Initially hidden */
+    width: 90%; /* Use 90% width for better fit on mobile */
+    max-width: 600px; /* Limit max width */
+    height: auto; /* Allow auto height */
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Enable scrolling for content overflow */
+    margin: 20px auto; /* Center on screen with margin */
+}
+
+/* Content styling */
+.letter-content {
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Title styling */
+.letter-content h1 {
+    font-size: 2em; /* Size of title */
+    color: #ff69b4;
+    margin-bottom: 20px; /* Add some space below the title */
+}
+/* Paragraph styling */
+.letter-content p {
+    margin: 5px 0; /* Spacing between paragraphs */
+    font-size: small; /* Slightly smaller font size */
+    line-height: 1.6; /* Increase line height for better readability */
+    padding: 0 10px; /* Padding to prevent text from touching the edges */
+}
+
+/* Media query for smaller devices */
+@media (max-width: 768px) {
+    .letter-content h1 {
+        font-size: 1.5em; /* Smaller title size for mobile */
+    }
+    
+    .letter-content p {
+        font-size: 1em; /* Smaller text size for mobile */
+        padding: 0 5px; /* Reduce padding on mobile */
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
